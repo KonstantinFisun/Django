@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Внесение изменений
+{% endblock %}
+
+{% block content %}
+    <h1>В какую таблицу будем добавлять запись?
+    </h1>
+<span style=" font-size : 40px; color : red;" >
+        <a  href="{% url 'Create_transport' %}">Транспорт    </a><br>
+        <a  href="{% url 'Create_type' %}">Типы транспорта</a><br>
+        <a  href="{% url 'Create_firm' %}">Фирмы    </a><br>
+    </span>
+{% endblock %}
+
+

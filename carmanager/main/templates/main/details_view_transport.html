@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}
+{{record_transport.model}}
+{% endblock %}
+
+{% block content %}
+    <div>
+        <p>Модель : {{ record_transport.model}}, Фирма : {{record_transport.id_firm}}, Тип : {{record_transport.id_type}},
+            Вес : {{ record_transport.weight}}, Мощность : {{record_transport.power}}</p>
+        <a href = "{% url 'transport-delete' record_transport.id %}" class="btn btn-danger">Удалить</a>
+        <a href = "{% url 'transport-update' record_transport.id %}" class="btn btn-info">Изменить</a>
+    </div>
+
+{% endblock %}
+

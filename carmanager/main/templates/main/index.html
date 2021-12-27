@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>Добро пожаловать на мой сайт, посвященный наземным транспортам.
+        Здесь вы можете найти всю информацию о имеющихся у нас моделях машинах.
+    </h1>
+<h1>Вы можете посмотреть следующие таблицы:
+    </h1>
+<span style=" font-size : 40px; color : red;" >
+        <a  href="{% url 'Transport' %}">Транспорт    </a><br>
+        <a  href="{% url 'Type' %}">Типы транспорта</a><br>
+        <a  href="{% url 'Firm' %}">Фирмы    </a><br>
+    </span>
+{% endblock %}
+

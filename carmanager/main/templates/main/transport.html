@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>Транспорт</h1>
+    {% if transport %}
+        {% for el in transport %}
+                <p>Модель : {{ el.model}}, Фирма : {{el.id_firm}}, Тип : {{el.id_type}}, Вес : {{ el.weight}}, Мощность : {{el.power}}
+                    <a href ="{% url 'transport-detail' el.id %}" class="btn btn-warning">Просмотреть</a>
+                </p>
+                <br>
+        {% endfor %}
+    {% else %}
+        <p>У нас нет таких записей</p>
+    {% endif %}
+{% endblock %}
+

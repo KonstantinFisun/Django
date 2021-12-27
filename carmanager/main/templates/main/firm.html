@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>Фирмы</h1>
+    {% if firm %}
+        {% for el in firm %}
+                <p>Фирма : {{ el.title}}, Страна : {{el.country}}
+                <a href ="{% url 'firm-detail' el.id %}" class="btn btn-warning">Просмотреть</a>
+                </p>
+        {% endfor %}
+    {% else %}
+        <p>У нас нет таких записей</p>
+    {% endif %}
+{% endblock %}
+

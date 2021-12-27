@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}
+{{record_type.title}}
+{% endblock %}
+
+{% block content %}
+    <div>
+        <p>Тип : {{ record_type.title}}</p>
+        <a href = "{% url 'type-delete' record_type.id %}" class="btn btn-danger">Удалить</a>
+        <a href = "{% url 'type-update' record_type.id %}" class="btn btn-info">Изменить</a>
+    </div>
+
+{% endblock %}
+

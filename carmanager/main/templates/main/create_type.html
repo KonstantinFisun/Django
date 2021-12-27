@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}
+Добавление типа транспорта
+{% endblock %}
+
+{% block content %}
+    <h1>Добавление типа транспорта:</h1><br>
+    <form method = "POST">
+        {% csrf_token %}
+        {{form.title}}<br>
+        <span>{{ error }}</span>
+        <button class = 'btn btn-success' type = "submit">Добавить тип</button>
+    </form>
+{% endblock %}
+
