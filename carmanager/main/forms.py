@@ -5,7 +5,6 @@ class TransportForm(ModelForm):
     class Meta:
         model = Transport
         fields = ['id_firm', 'id_type', 'model', 'weight', 'power']
-
         widgets = {
             "id_firm": TextInput(attrs={
                 'class': 'form-control',
